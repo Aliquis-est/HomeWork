@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -28,10 +30,62 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+
+    function sum(a, b) {
+      return a + b;
+    }
+    /**
+     * Сумма переменных.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} Сумма двух чисел.
+     */
+
+
+    function diff(a, b) {
+      if (a > b) {
+        return a - b;
+      } else if (a == b) {
+        return 0;
+      } else {
+        return b - a;
+      }
+    }
+
+    /**
+     * Разность переменных.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} Разность двух чисел.
+     */
+
+    function mult(a, b) {
+      return a * b;
+    }
+    /**
+     * Произведение переменных.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} Произведение двух чисел.
+     */
+
+    function div(a, b) {
+      return a / b;
+    }
+    /**
+     * Частное переменных.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} Частное двух чисел.
+     */
+
+    //вывод для самопроверки
+    console.log(diff(-6, 5));
+
+  </script>
 </body>
+
 </html>
