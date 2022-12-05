@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Необязательное задание, но желательно сделать.
 
 Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
@@ -47,10 +49,40 @@
 что-нибудь пропустить.
 4. Если непонятно условие - задайте вопрос.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    //es6
+    class PostES6 {
+      constructor(author, text) {
+        this.author = author;
+        this.text = text;
+        this.date = new Date();
+      }
+      edit(text) {
+        this.text = text;
+        this.date = new Date();
+      }
+    }
+
+    const postES6 = new PostES6('Анна', 'Первый пост');
+    console.log(postES6);
+
+    //Новый пост
+    postES6.edit("Второй пост");
+    console.log(postES6);
+
+
+    class AttachedPostES6 extends PostES6 {
+      constructor(author, text) {
+        super(author, text)
+      }
+      makeTextHighlighted() { //подсветка
+        this.highlighted = true;
+      }
+    }
+
+  </script>
 </body>
+
 </html>
